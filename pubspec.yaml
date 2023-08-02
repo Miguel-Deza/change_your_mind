@@ -43,6 +43,7 @@ dependencies:
   url_launcher: ^6.1.8
   mockito: ^5.4.2
   rename: ^2.1.1
+  firebase_core: ^2.15.0
 
 dev_dependencies:
   flutter_test:
