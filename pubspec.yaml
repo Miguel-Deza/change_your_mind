@@ -44,6 +44,8 @@ dependencies:
   mockito: ^5.4.2
   rename: ^2.1.1
   firebase_core: ^2.15.0
+  firebase_auth: ^4.7.2
+  modal_progress_hud_nsn: ^0.4.0
 
 dev_dependencies:
   flutter_test:

@@ -5,11 +5,21 @@ import 'package:change_your_mind/screens/chat_screen.dart';
 import 'package:change_your_mind/screens/login_screen.dart';
 import 'package:change_your_mind/screens/registration_screen.dart';
 import 'package:change_your_mind/screens/welcome_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // This is the last thing you need to add.
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(MultiBlocProvider(providers: [
     BlocProvider<ActivityBloc>(
         create: (BuildContext context) => ActivityBloc(ActivityRepository()))
