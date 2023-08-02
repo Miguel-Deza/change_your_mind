@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>579619648357-oq21bk7lrgupa1jqaddil6rr2p7oocic.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.579619648357-oq21bk7lrgupa1jqaddil6rr2p7oocic</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBbCXGm6g90bNiWMwQVRd3kI3JCrJOPqJY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>579619648357</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.changeYourMind.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>change-your-mind-ab9f0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>change-your-mind-ab9f0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:579619648357:ios:d4717bc29c3df53b56e78c</string>
+</dict>
+</plist>
