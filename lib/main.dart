@@ -1,6 +1,10 @@
 import 'package:are_you_bored_flutter_app/bloc/activity_bloc/activity_bloc.dart';
 import 'package:are_you_bored_flutter_app/data/repository/activity_repository.dart';
 import 'package:are_you_bored_flutter_app/presentation/home_screen.dart';
+import 'package:are_you_bored_flutter_app/screens/chat_screen.dart';
+import 'package:are_you_bored_flutter_app/screens/login_screen.dart';
+import 'package:are_you_bored_flutter_app/screens/registration_screen.dart';
+import 'package:are_you_bored_flutter_app/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,7 +31,14 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primarySwatch: Colors.purple,
       ),
-      home: const HomeScreen(),
+      initialRoute: WelcomeScreen.id,
+      routes: {
+        WelcomeScreen.id: (context) => WelcomeScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
+        RegistrationScreen.id: (context) => RegistrationScreen(),
+        ChatScreen.id: (context) => ChatScreen(),
+        HomeScreen.id: (context) => HomeScreen(),
+      },
     );
   }
 }
