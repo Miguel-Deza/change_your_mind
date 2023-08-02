@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
-import 'package:are_you_bored_flutter_app/data/data_provider/activity_provider.dart';
+import 'package:change_your_mind/data/data_provider/activity_provider.dart';
 
 // Creamos un mock de http.Client utilizando la clase MockClient.
 class MockClient extends Mock implements http.Client {}

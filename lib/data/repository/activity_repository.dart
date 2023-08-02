@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:are_you_bored_flutter_app/data/data_provider/activity_provider.dart';
-import 'package:are_you_bored_flutter_app/data/model/activity_model.dart';
+import 'package:change_your_mind/data/data_provider/activity_provider.dart';
+import 'package:change_your_mind/data/model/activity_model.dart';
 
 class ActivityRepository {
   Future<ActivityModel> getRandomActivity(

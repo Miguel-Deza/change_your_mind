@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:are_you_bored_flutter_app/data/model/activity_model.dart';
+import 'package:change_your_mind/data/model/activity_model.dart';
 
 //fromJson creates ActivityModel instance from JSON: Este test verifica que la función fromJson pueda crear correctamente una instancia de ActivityModel a partir de un mapa JSON dado y que los campos se asignen correctamente.
 //setupBackgroundType sets backgroundType correctly based on activity type: Este test verifica que el método setupBackgroundType establece correctamente el valor de backgroundType según el tipo de actividad proporcionado.

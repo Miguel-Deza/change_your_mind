@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:are_you_bored_flutter_app/data/model/activity_model.dart';
+import 'package:change_your_mind/data/model/activity_model.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 

@@ -1,4 +1,4 @@
-name: are_you_bored_flutter_app
+name: change_your_mind
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -42,6 +42,7 @@ dependencies:
   auto_size_text: ^3.0.0
   url_launcher: ^6.1.8
   mockito: ^5.4.2
+  rename: ^2.1.1
 
 dev_dependencies:
   flutter_test:

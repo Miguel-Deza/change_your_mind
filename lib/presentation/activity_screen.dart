@@ -1,6 +1,6 @@
-import 'package:are_you_bored_flutter_app/bloc/activity_bloc/activity_bloc.dart';
-import 'package:are_you_bored_flutter_app/presentation/error_screen.dart';
-import 'package:are_you_bored_flutter_app/presentation/loading_activity_screen.dart';
+import 'package:change_your_mind/bloc/activity_bloc/activity_bloc.dart';
+import 'package:change_your_mind/presentation/error_screen.dart';
+import 'package:change_your_mind/presentation/loading_activity_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

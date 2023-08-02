@@ -1,10 +1,10 @@
-import 'package:are_you_bored_flutter_app/bloc/activity_bloc/activity_bloc.dart';
-import 'package:are_you_bored_flutter_app/data/repository/activity_repository.dart';
-import 'package:are_you_bored_flutter_app/presentation/home_screen.dart';
-import 'package:are_you_bored_flutter_app/screens/chat_screen.dart';
-import 'package:are_you_bored_flutter_app/screens/login_screen.dart';
-import 'package:are_you_bored_flutter_app/screens/registration_screen.dart';
-import 'package:are_you_bored_flutter_app/screens/welcome_screen.dart';
+import 'package:change_your_mind/bloc/activity_bloc/activity_bloc.dart';
+import 'package:change_your_mind/data/repository/activity_repository.dart';
+import 'package:change_your_mind/presentation/home_screen.dart';
+import 'package:change_your_mind/screens/chat_screen.dart';
+import 'package:change_your_mind/screens/login_screen.dart';
+import 'package:change_your_mind/screens/registration_screen.dart';
+import 'package:change_your_mind/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

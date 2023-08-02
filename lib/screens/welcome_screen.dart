@@ -1,8 +1,8 @@
-import 'package:are_you_bored_flutter_app/presentation/home_screen.dart';
-import 'package:are_you_bored_flutter_app/screens/login_screen.dart';
-import 'package:are_you_bored_flutter_app/screens/registration_screen.dart';
+import 'package:change_your_mind/presentation/home_screen.dart';
+import 'package:change_your_mind/screens/login_screen.dart';
+import 'package:change_your_mind/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:are_you_bored_flutter_app/components/rounded_button.dart';
+import 'package:change_your_mind/components/rounded_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static const String id = "welcome_screen";

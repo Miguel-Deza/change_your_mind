@@ -1,4 +1,4 @@
-import 'package:are_you_bored_flutter_app/presentation/utilities/hardcoded_variales_for_home_screen.dart';
+import 'package:change_your_mind/presentation/utilities/hardcoded_variales_for_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../components/rounded_button.dart';
-import 'package:are_you_bored_flutter_app/constants.dart';
+import 'package:change_your_mind/constants.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = "login_screen";

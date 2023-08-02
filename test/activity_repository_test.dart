@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:are_you_bored_flutter_app/data/data_provider/activity_provider.dart';
-import 'package:are_you_bored_flutter_app/data/model/activity_model.dart';
-import 'package:are_you_bored_flutter_app/data/repository/activity_repository.dart';
+import 'package:change_your_mind/data/data_provider/activity_provider.dart';
+import 'package:change_your_mind/data/model/activity_model.dart';
+import 'package:change_your_mind/data/repository/activity_repository.dart';
 
 //test('getRandomActivity returns ActivityModel', () async { ... }): Verifica que la función getRandomActivity retorne una instancia de ActivityModel cuando se le pasan parámetros válidos. Configuramos el mock para que devuelva una respuesta simulada del ActivityProvider.
 //

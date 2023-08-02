@@ -1,4 +1,4 @@
-# are_you_bored_flutter_app
+# change_your_mind
 
 A new Flutter project.
 
