@@ -1,7 +1,10 @@
 import 'package:change_your_mind/presentation/utilities/hardcoded_variales_for_home_screen.dart';
+import 'package:change_your_mind/screens/consult.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
+import 'package:change_your_mind/screens/music.dart';
+import 'package:change_your_mind/screens/tips_screen.dart';
 
 import 'activity_screen.dart';
 
@@ -18,11 +21,48 @@ class _HomeScreenState extends State<HomeScreen> {
   List<String> activityTypes = ActivityTypes.values.map((e) => e.name).toList();
 
   String dropdownValue = participantsNumber.first;
-
+  int currentPageIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(fit: StackFit.expand, children: [
+        bottomNavigationBar: NavigationBar(
+          onDestinationSelected: (int index) {
+            setState(() {
+              currentPageIndex = index;
+            });
+          },
+          selectedIndex: currentPageIndex,
+          destinations: const <Widget>[
+            NavigationDestination(
+              icon: Icon(Icons.explore),
+              label: 'Activity',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.music_note),
+              label: 'Music',
+            ),
+            NavigationDestination(
+              selectedIcon: Icon(Icons.bookmark),
+              icon: Icon(Icons.tips_and_updates),
+              label: 'Tips',
+            ),
+            NavigationDestination(
+              selectedIcon: Icon(Icons.bookmark),
+              icon: Icon(Icons.email),
+              label: 'Psycologists',
+            ),
+          ],
+        ),
+        body: <Widget>[
+          buildStack(context),
+          Music(),
+          Tips(),
+          Consult(),
+        ][currentPageIndex]);
+  }
+
+  Stack buildStack(BuildContext context) {
+    return Stack(fit: StackFit.expand, children: [
       Container(
         decoration: const BoxDecoration(
             color: Color(0xffffffff),
@@ -84,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
               topLeft: Radius.circular(20), topRight: Radius.circular(20)),
           panel:
               Stack(fit: StackFit.expand, children: [mySlidingUpPanelWidget()]))
-    ]));
+    ]);
   }
 
   Widget mySlidingUpPanelWidget() {

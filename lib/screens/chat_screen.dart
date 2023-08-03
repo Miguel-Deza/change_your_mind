@@ -1,5 +1,6 @@
 import 'dart:ffi';
 
+import 'package:change_your_mind/presentation/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:change_your_mind/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -63,8 +64,8 @@ class _ChatScreenState extends State<ChatScreen> {
               onPressed: () {
                 messagesStream();
                 //Implement logout functionality
-                // _auth.signOut();
-                // Navigator.pop(context);
+                _auth.signOut();
+                Navigator.pop(context);
               }),
         ],
         title: Text(
@@ -106,6 +107,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         'timestamp': FieldValue.serverTimestamp(),
                       });
                       messageTextController.clear();
+                      Navigator.pushNamed(context, HomeScreen.id);
                     },
                     child: Text(
                       'Send',
