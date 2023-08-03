@@ -2,8 +2,12 @@ import 'package:change_your_mind/bloc/activity_bloc/activity_bloc.dart';
 import 'package:change_your_mind/data/repository/activity_repository.dart';
 import 'package:change_your_mind/presentation/home_screen.dart';
 import 'package:change_your_mind/screens/chat_screen.dart';
+import 'package:change_your_mind/screens/consult.dart';
+import 'package:change_your_mind/screens/journal.dart';
 import 'package:change_your_mind/screens/login_screen.dart';
+import 'package:change_your_mind/screens/music.dart';
 import 'package:change_your_mind/screens/registration_screen.dart';
+import 'package:change_your_mind/screens/tips_screen.dart';
 import 'package:change_your_mind/screens/welcome_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -41,13 +45,16 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primarySwatch: Colors.purple,
       ),
-      initialRoute: WelcomeScreen.id,
+      initialRoute: Tips.id,
       routes: {
         WelcomeScreen.id: (context) => WelcomeScreen(),
         LoginScreen.id: (context) => LoginScreen(),
         RegistrationScreen.id: (context) => RegistrationScreen(),
         ChatScreen.id: (context) => ChatScreen(),
         HomeScreen.id: (context) => HomeScreen(),
+        Music.id: (context) => Music(),
+        Consult.id: (context) => Consult(),
+        Tips.id: (context) => Tips(),
       },
     );
   }
