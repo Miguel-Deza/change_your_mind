@@ -87,6 +87,29 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     });
                   } catch (e) {
                     print(e);
+
+                    // Mostrar un mensaje de error al usuario
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: Text('Error de registro'),
+                          content: Text("$e"),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Cerrar'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+
+                    setState(() {
+                      showSpinner = false;
+                    });
                   }
                 },
               ),

@@ -1,9 +1,4 @@
-import 'dart:convert';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 class Consult extends StatefulWidget {
   static const String id = "consult_screen";
@@ -16,11 +11,13 @@ class Psychologist {
   final String name;
   final String specialty;
   final String imageURL;
+  final String email;
 
   Psychologist({
     required this.name,
     required this.specialty,
     required this.imageURL,
+    required this.email,
   });
 }
 
@@ -29,43 +26,82 @@ List<Psychologist> psychologistData = [
     name: "Dr. John Doe",
     specialty: "Clinical Psychologist",
     imageURL:
-        "https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg?w=360",
+        "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
+    email: "john.doe@example.com",
   ),
   Psychologist(
     name: "Dr. Jane Smith",
     specialty: "Counseling Psychologist",
     imageURL:
-        "https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg?w=360",
+        "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
+    email: "jane.smith@example.com",
   ),
   Psychologist(
     name: "Dr. Michael Johnson",
     specialty: "Child Psychologist",
     imageURL:
-        "https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg?w=360",
+        "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
+    email: "michael.johnson@example.com",
   ),
   Psychologist(
-    name: "Dr. Michael Johnson",
-    specialty: "Child Psychologist",
+    name: "Dr. Emily Davis",
+    specialty: "Family Therapist",
     imageURL:
-        "https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg?w=360",
+        "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
+    email: "emily.davis@example.com",
   ),
   Psychologist(
-    name: "Dr. Michael Johnson",
-    specialty: "Child Psychologist",
+    name: "Dr. Daniel Lee",
+    specialty: "Addiction Counselor",
     imageURL:
-        "https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg?w=360",
-  ),
-  Psychologist(
-    name: "Dr. Michael Johnson",
-    specialty: "Child Psychologist",
-    imageURL:
-        "https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg?w=360",
+        "https://img.freepik.com/vector-gratis/fondo-personaje-doctor_1270-84.jpg?w=2000",
+    email: "daniel.lee@example.com",
   ),
   // Agrega más psicólogos de ejemplo aquí con datos falsos.
 ];
 
 class _ConsultState extends State<Consult> {
-  final Query queries = FirebaseDatabase.instance.ref('doctorData');
+  void _showAppointmentDialog(
+      String psychologistName, String psychologistEmail) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Solicitar una cita con $psychologistName'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                  'Por favor, introduce tus detalles de contacto para solicitar una cita:'),
+              TextFormField(
+                decoration: InputDecoration(labelText: 'Nombre'),
+              ),
+              TextFormField(
+                decoration: InputDecoration(labelText: 'Correo electrónico'),
+              ),
+            ],
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                // Implementa aquí la lógica para solicitar la cita.
+                // Por ejemplo, puedes enviar un correo electrónico al psicólogo.
+                // sendAppointmentRequestEmail(psychologistEmail);
+                Navigator.of(context).pop();
+              },
+              child: Text('Solicitar cita'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('Cancelar'),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -105,9 +141,8 @@ class _ConsultState extends State<Consult> {
                     title: Text(psychologist.name),
                     subtitle: Text(psychologist.specialty),
                     onTap: () {
-                      // Implementa aquí la lógica para manejar el toque en el psicólogo.
-                      // Por ejemplo, puedes navegar a otra pantalla para mostrar más detalles del psicólogo.
-                      // Navigator.push(...);
+                      _showAppointmentDialog(
+                          psychologist.name, psychologist.email);
                     },
                   ),
                 );
@@ -115,25 +150,6 @@ class _ConsultState extends State<Consult> {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Padding reusingFormat(String data, double bottomPadding) {
-    return Padding(
-      padding: EdgeInsets.fromLTRB(0, 0, 0, bottomPadding),
-      child: Text(data),
-    );
-  }
-
-  Padding reusingFormatWithDesign(String data, double bottomPadding,
-      TextAlign textAlign, double fontSize, FontWeight fontWeight) {
-    return Padding(
-      padding: EdgeInsets.fromLTRB(0, 0, 0, bottomPadding),
-      child: Text(
-        data,
-        textAlign: textAlign,
-        style: TextStyle(fontSize: fontSize, fontWeight: fontWeight),
       ),
     );
   }

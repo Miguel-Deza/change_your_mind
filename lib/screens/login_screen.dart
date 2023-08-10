@@ -83,6 +83,29 @@ class _LoginScreenState extends State<LoginScreen> {
                     });
                   } catch (e) {
                     print(e);
+
+                    // Mostrar un mensaje de error al usuario
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: Text('Error de inicio de sesión'),
+                          content: Text("$e"),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Cerrar'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+
+                    setState(() {
+                      showSpinner = false;
+                    });
                   }
                 },
               ),

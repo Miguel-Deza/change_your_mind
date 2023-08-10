@@ -107,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ]))),
               const Padding(padding: EdgeInsets.only(top: 61.0)),
               Text(
-                "Tap to get an activity",
+                "Tap ☝️ to get an activity",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.lato(
                     textStyle: const TextStyle(
